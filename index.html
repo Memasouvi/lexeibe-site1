@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lexeibe Limousine | Philadelphia, Pennsylvania</title>
+<meta name="description" content="Lexeibe LLC provides reliable private transportation, airport pickup and drop-off, and local delivery in Philadelphia, Pennsylvania.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1424;--bg2:#070d1a;--gold:#c4a56a;--gold2:#e2cf9f;--cream:#f2ecde;--mut:#8e9ab3;--line:#1d2a44}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--cream);font:17px/1.7 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:400;margin:0;letter-spacing:-.02em;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(100% - 56px,1160px);margin-inline:auto}
+.eyebrow{color:var(--gold2);letter-spacing:.32em;text-transform:uppercase;font-size:13px;font-weight:500;margin:0 0 22px;display:flex;align-items:center;gap:14px}
+.eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
+section{position:relative}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:#0a1424e6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:16px;text-decoration:none}
+.mark{width:48px;height:48px;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);font:500 26px "Playfair Display",serif;background:linear-gradient(135deg,#c4a56a1f,transparent)}
+.brand b{display:block;font-weight:500;font-size:22px;line-height:1.1}
+.brand small{display:block;color:var(--mut);letter-spacing:.3em;font-size:12px}
+#m{position:absolute;opacity:0;pointer-events:none}
+.burger{width:58px;height:58px;border:1px solid var(--line);display:grid;place-content:center;gap:9px;cursor:pointer}
+.burger i{display:block;width:28px;height:1.5px;background:var(--cream)}
+.menu{position:fixed;inset:0;top:77px;background:var(--bg);display:none;padding:28px;z-index:25}
+#m:checked~.menu{display:block}
+.menu a{display:block;font:400 34px "Playfair Display",serif;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}
+.menu a:hover{color:var(--gold)}
+@media(min-width:900px){
+ .burger{display:none}
+ .menu,#m:checked~.menu{display:flex;position:static;padding:0;background:none;gap:34px}
+ .menu a{font:500 13px "DM Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase;border:0;padding:6px 0;color:var(--cream);position:relative}
+ .menu a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s}
+ .menu a:hover:after{width:100%}
+}
+
+/* hero */
+.hero{overflow:hidden;padding:56px 0 34px;
+ background:
+  radial-gradient(55% 45% at 78% 30%,#c4a56a26,transparent 70%),
+  radial-gradient(40% 40% at 10% 0%,#1d3a7a40,transparent 70%),
+  linear-gradient(180deg,#0b1a36,#050a15 90%)}
+.hero:after{content:"";position:absolute;right:-240px;top:-160px;width:640px;height:640px;border:1px solid #c4a56a44;border-radius:50%;pointer-events:none}
+.sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:62%;z-index:1;opacity:.85}
+.hero-in{position:relative;z-index:2;display:grid;gap:6px;align-items:center}
+.hero h1{font-size:clamp(46px,8.4vw,98px);max-width:10ch}
+.hero h1 em{background:linear-gradient(120deg,#f1e2b6,#c4a56a 60%,#e2cf9f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#b6c0d6;max-width:32em;font-size:clamp(18px,2.2vw,21px);margin:26px 0 32px}
+.btn{display:inline-block;background:linear-gradient(120deg,#d6b878,#c4a56a);color:#0a1020;text-decoration:none;letter-spacing:.22em;text-transform:uppercase;font-weight:500;font-size:14px;padding:22px 32px;text-align:center;box-shadow:0 10px 30px #c4a56a33;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px #c4a56a55}
+.link{display:inline-block;margin:26px 0 0 26px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;font-size:14px;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px}
+.link:hover{color:var(--gold2)}
+.hero-car{position:relative;margin:10px -20px 0}
+.car{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 30px #000a);animation:drive 1.8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes drive{from{transform:translateX(90px);opacity:0}to{transform:none;opacity:1}}
+.tick{position:relative;z-index:2;margin-top:18px;color:var(--mut);letter-spacing:.24em;text-transform:uppercase;font-size:12px;display:flex;flex-wrap:wrap;gap:8px 20px}
+.tick span:nth-child(even){color:var(--gold)}
+@media(min-width:960px){
+ .hero{padding:70px 0 40px}
+ .hero-in{grid-template-columns:.9fr 1.2fr}
+ .hero-car{margin:0 -90px 0 -40px}
+}
+
+/* about */
+.about{padding:110px 0 90px}
+.about .grid{display:grid;gap:60px}
+.quote{border:1px solid #c4a56a55;padding:48px 32px;background:linear-gradient(135deg,#102244,#070d1a);position:relative}
+.quote:before,.quote:after{content:"";position:absolute;width:44px;height:44px;border:2px solid var(--gold)}
+.quote:before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.quote:after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.quote big{display:block;font:500 clamp(54px,12vw,112px) "Playfair Display",serif;background:linear-gradient(120deg,#f1e2b6,#b38b45 55%,#e2cf9f);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:54px}
+.quote p{font:400 clamp(24px,4vw,32px)/1.4 "Playfair Display",serif;margin:0;max-width:16em}
+.about h2{font-size:clamp(40px,6.2vw,72px);margin-bottom:30px}
+.about p{color:#aeb8cf;max-width:36em}
+.vals{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid var(--line)}
+.vals li{padding:18px 0 18px 26px;border-bottom:1px solid var(--line);display:grid;gap:2px;position:relative}
+.vals li:before{content:"";position:absolute;left:0;top:30px;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.vals b{font:400 24px "Playfair Display",serif}
+.vals span{color:var(--mut);font-size:16px}
+@media(min-width:900px){.about .grid{grid-template-columns:1fr 1.1fr;align-items:center}}
+
+/* services */
+.services{padding:100px 0;background:linear-gradient(180deg,var(--bg),#081122)}
+.services h2{font-size:clamp(42px,7vw,82px);margin-bottom:26px}
+.services .intro{color:#aeb8cf;max-width:32em;margin-bottom:64px}
+.svc{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:44px 0;border-top:1px solid var(--line);transition:padding .35s}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc:hover{padding-left:16px}
+.svc:hover h3{color:var(--gold2)}
+.svc>span{color:var(--gold);letter-spacing:.1em;padding-top:12px}
+.svc h3{font-size:clamp(34px,5vw,54px);margin-bottom:12px;transition:color .3s}
+.svc p{color:var(--mut);margin:0;max-width:30em}
+
+/* thanks */
+.thanks{padding:120px 0;background:radial-gradient(50% 60% at 85% 20%,#c4a56a1a,transparent 70%),var(--bg2);overflow:hidden}
+.thanks:before{content:"\201C";position:absolute;right:4%;top:-30px;font:400 380px/1 "Playfair Display",serif;color:#c4a56a14}
+.thanks .wrap{position:relative}
+.thanks h2{font-size:clamp(42px,7vw,82px);max-width:12ch;margin-bottom:32px}
+.thanks p{color:#b3bdd2;max-width:36em}
+.promise{margin-top:40px;border-left:2px solid var(--gold);padding:6px 0 6px 24px;font:italic 400 clamp(22px,3.4vw,30px)/1.4 "Playfair Display",serif;color:var(--gold2);max-width:20em}
+
+/* contact + cta */
+.contact{padding:20px 0 40px}
+.info{border-top:1px solid var(--line);padding:36px 0}
+.info h3{font:500 13px "DM Sans",sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.info p,.info a{font-size:clamp(22px,3.4vw,30px);line-height:1.5;margin:0;text-decoration:none;word-break:break-word}
+.info a:hover{color:var(--gold2)}
+.cta{padding:100px 0 120px;border-top:1px solid var(--line);background:radial-gradient(45% 60% at 80% 70%,#c4a56a1f,transparent 70%)}
+.cta h2{font-size:clamp(50px,9vw,108px);max-width:9ch;margin-bottom:56px}
+.round{width:210px;height:210px;border-radius:50%;background:linear-gradient(135deg,#e2cf9f,#c4a56a 60%,#a98a4d);color:#0a1020;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:36px 30px 26px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;font-size:14px;line-height:1.5;margin-left:auto;transition:transform .3s;box-shadow:0 18px 50px #c4a56a33}
+.round:hover{transform:scale(1.05) rotate(-3deg)}
+.round i{font-style:normal;font-size:28px;align-self:flex-end;letter-spacing:0}
+@media(min-width:900px){
+ .cta .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+ .cta h2{margin:0}
+ .round{margin:0;width:250px;height:250px}
+ .contact .wrap{display:grid;grid-template-columns:repeat(2,1fr);column-gap:60px}
+}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:50px 0 60px;color:var(--mut);font-size:15px}
+footer .wrap{display:grid;gap:26px}
+footer .brand b{color:var(--mut);font-size:19px}
+footer a.top{letter-spacing:.2em;text-transform:uppercase;font-size:13px;text-decoration:none}
+footer a.top:hover{color:var(--gold2)}
+@media(min-width:900px){footer .wrap{grid-template-columns:1fr auto;align-items:center}}
+@media(max-width:480px){.wrap{width:min(100% - 40px,1160px)}.svc{grid-template-columns:48px 1fr}.btn{display:block}.link{margin-left:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <input type="checkbox" id="m" aria-label="Open menu">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Lexeibe Limousine home">
+      <span class="mark">L</span>
+      <span><b>Lexeibe</b><small>LIMOUSINE</small></span>
+    </a>
+    <label class="burger" for="m" aria-label="Menu"><i></i><i></i></label>
+    <nav class="menu" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#thanks">Thank you</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <!-- night city skyline -->
+  <svg class="sky" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <pattern id="win" width="14" height="18" patternUnits="userSpaceOnUse"><rect x="3" y="4" width="4" height="6" fill="#e2cf9f"/></pattern>
+      <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1424" stop-opacity="0"/><stop offset="1" stop-color="#050a15"/></linearGradient>
+      <g id="b">
+        <rect x="0" y="140" width="90" height="160"/><rect x="80" y="70" width="70" height="230"/><rect x="160" y="160" width="110" height="140"/>
+        <rect x="260" y="40" width="60" height="260"/><rect x="330" y="110" width="100" height="190"/><rect x="440" y="180" width="80" height="120"/>
+        <rect x="530" y="60" width="90" height="240"/><rect x="630" y="130" width="70" height="170"/><rect x="710" y="30" width="110" height="270"/>
+        <rect x="830" y="150" width="80" height="150"/><rect x="920" y="80" width="100" height="220"/><rect x="1030" y="120" width="70" height="180"/><rect x="1090" y="50" width="110" height="250"/>
+      </g>
+    </defs>
+    <use href="#b" fill="#0c1a36"/>
+    <use href="#b" fill="url(#win)" opacity=".4"/>
+    <rect width="1200" height="300" fill="url(#fade)"/>
+  </svg>
+
+  <div class="wrap hero-in">
+    <div class="copy">
+      <p class="eyebrow">Philadelphia, Pennsylvania</p>
+      <h1>Every journey, <em>carefully</em> handled.</h1>
+      <p class="lead">Lexeibe LLC offers dependable private transportation for airport trips, everyday rides and local deliveries, with courtesy at every stop.</p>
+      <a class="btn" href="tel:+12672059075">Call +1 (267) 205-9075</a>
+      <a class="link" href="#services">Explore services</a>
+    </div>
+
+    <!-- limousine illustration. To use your own photo, replace this whole <svg> with: <img class="car" src="car.jpg" alt="Lexeibe limousine"> -->
+    <div class="hero-car">
+      <svg class="car" viewBox="0 0 900 290" role="img" aria-label="Black Lexeibe limousine">
+        <defs>
+          <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26385e"/><stop offset=".35" stop-color="#0d1730"/><stop offset="1" stop-color="#03060d"/></linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#30497a"/><stop offset="1" stop-color="#0a1328"/></linearGradient>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff3c9" stop-opacity=".75"/><stop offset="1" stop-color="#fff3c9" stop-opacity="0"/></linearGradient>
+          <radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".75"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        </defs>
+        <ellipse cx="450" cy="262" rx="440" ry="20" fill="url(#shadow)"/>
+        <polygon points="860,170 900,128 900,214" fill="url(#beam)"/>
+        <!-- body -->
+        <path d="M26 214 L26 168 Q26 152 46 148 L150 134 Q192 88 266 80 L590 76 Q662 76 708 112 L812 138 Q862 148 872 176 L876 214 Z" fill="url(#body)" stroke="#c4a56a" stroke-opacity=".35"/>
+        <path d="M266 80 L590 76" stroke="#fff" stroke-opacity=".3" stroke-width="2" fill="none"/>
+        <!-- windows -->
+        <path d="M178 132 Q206 98 266 90 L332 89 L332 132 Z" fill="url(#glass)"/>
+        <path d="M344 89 L472 88 L472 132 L344 132 Z" fill="url(#glass)"/>
+        <path d="M484 88 L584 87 Q640 88 676 116 L694 132 L484 132 Z" fill="url(#glass)"/>
+        <path d="M338 90 L338 214 M478 88 L478 214" stroke="#000" stroke-opacity=".55"/>
+        <!-- gold trim -->
+        <path d="M34 160 L866 170" stroke="#c4a56a" stroke-width="2" stroke-opacity=".75" fill="none"/>
+        <path d="M60 196 L840 200" stroke="#fff" stroke-opacity=".08" stroke-width="3" fill="none"/>
+        <rect x="372" y="144" width="30" height="5" rx="2" fill="#c4a56a"/><rect x="512" y="144" width="30" height="5" rx="2" fill="#c4a56a"/>
+        <!-- lights -->
+        <ellipse cx="858" cy="172" rx="18" ry="7" fill="#fff7dc"/>
+        <ellipse cx="858" cy="172" rx="34" ry="16" fill="#fff3c9" opacity=".25"/>
+        <rect x="26" y="158" width="9" height="12" rx="2" fill="#e0524a"/>
+        <!-- wheels -->
+        <circle cx="190" cy="214" r="56" fill="#03060d"/><circle cx="716" cy="214" r="56" fill="#03060d"/>
+        <g><circle cx="190" cy="214" r="46" fill="#0b0d14"/><circle cx="190" cy="214" r="31" fill="none" stroke="#c4a56a" stroke-width="3"/><circle cx="190" cy="214" r="9" fill="#c4a56a"/>
+        <path d="M190 190 V238 M166 214 H214 M173 197 L207 231 M207 197 L173 231" stroke="#c4a56a" stroke-width="1.5" opacity=".7"/></g>
+        <g><circle cx="716" cy="214" r="46" fill="#0b0d14"/><circle cx="716" cy="214" r="31" fill="none" stroke="#c4a56a" stroke-width="3"/><circle cx="716" cy="214" r="9" fill="#c4a56a"/>
+        <path d="M716 190 V238 M692 214 H740 M699 197 L733 231 M733 197 L699 231" stroke="#c4a56a" stroke-width="1.5" opacity=".7"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap"><div class="tick" aria-label="Our values"><span>Punctual</span><span>&#9670;</span><span>Courteous</span><span>&#9670;</span><span>Discreet</span></div></div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div class="quote">
+      <big>LEXEIBE</big>
+      <p>&ldquo;Punctual, polished and always professional.&rdquo;</p>
+    </div>
+    <div>
+      <p class="eyebrow">About Lexeibe</p>
+      <h2>Trust, mile after mile.</h2>
+      <p>Lexeibe LLC provides attentive private transportation from its home base in Philadelphia, Pennsylvania, led by owner Weladou Bowbe.</p>
+      <p>We respect your schedule, communicate clearly, and treat every passenger and every package as our own responsibility, whether you are heading to the airport, across town, or sending something that cannot wait.</p>
+      <ul class="vals">
+        <li><b>Punctuality</b><span>We plan each trip around your time, not ours.</span></li>
+        <li><b>Comfort</b><span>A clean, quiet vehicle and a calm start to every ride.</span></li>
+        <li><b>Discretion</b><span>Your plans, your passengers and your packages stay private.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="eyebrow">Our services</p>
+    <h2>Transportation, on your terms.</h2>
+    <p class="intro">From airport runs to private transportation and local delivery, each trip is planned around your schedule.</p>
+    <article class="svc"><span>01</span><div><h3>Airport pickup</h3><p>A courteous greeting and a smooth, comfortable ride once you have landed.</p></div></article>
+    <article class="svc"><span>02</span><div><h3>Airport drop-off</h3><p>On-time departures so you arrive at your terminal prepared and unhurried.</p></div></article>
+    <article class="svc"><span>03</span><div><h3>Private transport</h3><p>Professional point-to-point service for business, personal and special occasions.</p></div></article>
+    <article class="svc"><span>04</span><div><h3>Delivery services</h3><p>Careful local delivery for items that deserve a dependable trip of their own.</p></div></article>
+  </div>
+</section>
+
+<section class="thanks" id="thanks">
+  <div class="wrap">
+    <p class="eyebrow">With gratitude</p>
+    <h2>Thank you for riding with us.</h2>
+    <p>Every ride begins with someone&rsquo;s trust. To our passengers, partners and neighbors across Philadelphia: thank you for choosing Lexeibe LLC. Your confidence is what keeps us punctual, polished and proud of the work we do.</p>
+    <p>We are grateful for every trip, every kind word and every returning guest.</p>
+    <div class="promise">Our promise: a spotless vehicle, a courteous driver and an on-time arrival.</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="info"><h3>Phone</h3><a href="tel:+12672059075">+1 (267) 205-9075</a></div>
+    <div class="info"><h3>Email</h3><a href="mailto:weladoubwbe@gmail.com">weladoubwbe@gmail.com</a></div>
+    <div class="info"><h3>Location</h3><p>3117 Kensington Ave<br>Philadelphia, PA 19134</p></div>
+    <div class="info"><h3>Services</h3><p>Airport &middot; Private transport<br>Delivery</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div><p class="eyebrow">Ready when you are</p><h2>Let&rsquo;s plan your next ride.</h2></div>
+    <a class="round" href="tel:+12672059075">Call to reserve<i>&#8599;</i></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><span class="mark">L</span><span><b>Lexeibe</b><small>LIMOUSINE</small></span></a>
+      <p style="margin:22px 0 0">&copy; 2026 Lexeibe LLC. All rights reserved.</p>
+    </div>
+    <a class="top" href="#top">Back to top &#8593;</a>
+  </div>
+</footer>
+
+</body>
+</html>
